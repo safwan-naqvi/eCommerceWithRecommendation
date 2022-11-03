@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">eCommerceApp</string>
+    <string name="app_name_title">E-Commerce</string>
+    <string name="app_name_desc">Buy Your Desired Quality Products</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Enter Password</string>
+    <string name="forget_password">Forgot Your Password?</string>
+    <string name="forget_password_desc">Enter Your Registered Email Below to recieve password reset instructions.</string>
+    <string name="email_address">Your Email Address</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="forget_password_extra">Check Your Inbox after clicking the button above to get reset instructions</string>
+    <string name="trending_products">Latest Trending</string>
+</resources>

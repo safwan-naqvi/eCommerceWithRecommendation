@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "638804327358",
+    "project_id": "ai-recommed-app",
+    "storage_bucket": "ai-recommed-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638804327358:android:791c9fc434189c5b2d57ef",
+        "android_client_info": {
+          "package_name": "com.example.afecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638804327358-adcpl8l0eki0qo8dck78bq9ndlu01mkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArIuRYNLjhYm27Erqe0Ln_KSIiaF1YERQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638804327358-adcpl8l0eki0qo8dck78bq9ndlu01mkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

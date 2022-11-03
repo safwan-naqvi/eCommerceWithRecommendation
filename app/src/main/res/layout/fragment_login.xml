@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/app_heading"
+    tools:context=".Dashboard.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F1F1F1"
+            android:elevation="@dimen/_1sdp"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/login_loader"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/logging_in_loading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_loader"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_minus60sdp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="Signing In"
+                android:textSize="@dimen/_24sdp" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/actionBarSize"
+            android:paddingBottom="@dimen/_24sdp"
+            android:orientation="vertical"
+            android:background="#B2F1F1F1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/logo"
+                    app:tint="@color/app_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/app_name_title"
+                    android:textAllCaps="true"
+                    android:textColor="#322727"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="User Login"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:textSize="@dimen/_24sdp"
+            android:fontFamily="@font/montserrat_light"
+            android:gravity="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constrain" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="@+id/title" />
+
+        <LinearLayout
+            android:id="@+id/container_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:orientation="vertical"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_extralight"
+                android:hint="Email Address"
+                android:textSize="18sp">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_extralight"
+                android:hint="@string/password"
+                android:textSize="18sp">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forget_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password?"
+            app:layout_constraintTop_toBottomOf="@+id/container_login"
+            app:layout_constraintEnd_toEndOf="@+id/container_login"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/proxima_nova"
+            />
+
+        <TextView
+            android:id="@+id/not_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova"
+            android:text="Not a member? Register"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@+id/signin_btn"
+            app:layout_constraintTop_toTopOf="@+id/forget_pass" />
+
+        <Button
+            android:id="@+id/signin_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/app_bg_primary"
+            android:background="@drawable/custom_button_design"
+            android:clickable="true"
+            android:elevation="@dimen/_6sdp"
+            android:enabled="false"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:text="Sign In With Email"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/app_white"
+            android:textSize="@dimen/_13sdp"
+            android:drawableTint="@color/app_white"
+            android:drawableLeft="@drawable/email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/container_login"
+            app:layout_constraintStart_toStartOf="@+id/container_login"
+            app:layout_constraintTop_toBottomOf="@+id/container_login"
+            app:layout_constraintVertical_bias="0.1"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/google_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:background="@drawable/custom_button_design"
+            android:clickable="true"
+            android:elevation="@dimen/_6sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Sign In With Google"
+            android:layout_margin="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/app_text"
+            android:textSize="@dimen/_13sdp"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/google"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="@+id/container_login"
+            app:layout_constraintStart_toStartOf="@+id/container_login"
+            app:layout_constraintTop_toBottomOf="@+id/signin_btn"
+            android:focusable="true" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

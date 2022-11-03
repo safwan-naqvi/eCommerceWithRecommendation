@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_extralight"
+        android:text="eCommerce App"
+        android:textColor="@color/app_white"
+        android:letterSpacing="0.06"
+        android:textSize="@dimen/_24sdp"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="AI Based Online Store"
+        android:textColor="@color/app_white"
+        android:textSize="@dimen/_14sdp"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splash_title" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_loading"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_250sdp"
+        app:lottie_rawRes="@raw/loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_loader"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintBottom_toTopOf="@+id/credit_text"
+        app:layout_constraintEnd_toEndOf="@+id/splash_loading"
+        app:layout_constraintStart_toStartOf="@+id/splash_loading"
+        app:layout_constraintTop_toBottomOf="@+id/splash_loading"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loader" />
+
+    <TextView
+        android:id="@+id/credit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="App By Amar &amp; Fahad"
+        android:textAllCaps="true"
+        android:textColor="@color/app_white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

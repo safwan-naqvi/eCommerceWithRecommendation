@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appBlue">#132666</color>
+    <color name="progressGrey">#c3c3c3</color>
+    <color name="progressGreen">#81C784</color>
+    <color name="progressBlue">#4FC3F7</color>
+</resources>

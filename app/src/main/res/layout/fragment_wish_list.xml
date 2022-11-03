@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:padding="@dimen/_6sdp"
+    tools:context=".Fragment.WishListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel"
+                android:layout_width="match_parent"
+                app:autoPlay="true"
+                app:showNavigationButtons="false"
+                app:showCaption="false"
+                android:layout_height="@dimen/_165sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/heart"
+                android:layout_marginRight="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/wish_text"
+                app:layout_constraintEnd_toStartOf="@+id/wish_text"
+                app:layout_constraintTop_toTopOf="@+id/wish_text"
+                app:tint="@color/app_bg_primary" />
+
+            <TextView
+                android:id="@+id/wish_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Your Wishlist"
+                android:textAllCaps="true"
+                app:layout_constraintHorizontal_bias="0.6"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/white"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wish_list"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

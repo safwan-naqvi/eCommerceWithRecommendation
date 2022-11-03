@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F3C78B"
+    tools:context=".Dashboard.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F1F1F1"
+            android:visibility="invisible"
+            android:elevation="@dimen/_1sdp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/register_loader"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_centerInParent="true"
+                app:lottie_rawRes="@raw/logging_in_loading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_loader"
+                android:layout_centerHorizontal="true"
+                android:text="Signing Up New User"
+                android:textSize="@dimen/_22sdp"
+                android:fontFamily="@font/montserrat_light"
+                android:layout_marginTop="@dimen/_minus60sdp"/>
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/actionBarSize"
+            android:paddingBottom="@dimen/_24sdp"
+            android:orientation="vertical"
+            android:background="#B2F1F1F1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/logo"
+                    app:tint="@color/app_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/app_name_title"
+                    android:textAllCaps="true"
+                    android:textColor="#322727"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="User Registeration"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textSize="@dimen/_22sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constrain" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="@+id/title" />
+
+        <LinearLayout
+            android:id="@+id/container_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extralight"
+                android:hint="Full Name"
+                android:textSize="18sp">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_extralight"
+                android:hint="Email Address"
+                android:textSize="18sp">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_extralight"
+                android:hint="@string/password"
+                android:textSize="18sp">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_cpass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extralight"
+                android:hint="Confirm Password"
+                android:textSize="18sp">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/already_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already a member? Login"
+            app:layout_constraintBottom_toTopOf="@+id/signup_btn"
+            app:layout_constraintEnd_toEndOf="@+id/signup_btn"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/proxima_nova"
+            app:layout_constraintStart_toStartOf="@+id/signup_btn"
+            app:layout_constraintTop_toBottomOf="@+id/container_signup" />
+
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/app_secondary"
+            android:background="@drawable/custom_button_design"
+            android:clickable="true"
+            android:elevation="@dimen/_6sdp"
+            android:enabled="false"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Sign Up"
+            android:layout_margin="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/app_white"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/container_signup"
+            app:layout_constraintStart_toStartOf="@+id/container_signup"
+            app:layout_constraintTop_toBottomOf="@+id/container_signup"
+            app:layout_constraintVertical_bias="0.2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

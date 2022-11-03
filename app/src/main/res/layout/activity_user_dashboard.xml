@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_heading"
+    tools:context=".Dashboard.UserDashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/bottom_nav_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:background="@drawable/round_corner"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            app:cnb_addBottomInset="false"
+            app:cnb_addLeftInset="false"
+            app:cnb_addRightInset="false"
+            app:cnb_addTopInset="false"
+            app:cnb_animationDuration="200"
+            app:cnb_badgeColor="#2F9DF4"
+            app:cnb_iconSize="@dimen/_22sdp"
+            app:cnb_menuResource="@menu/main_menu"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_radius="8dp"
+            app:cnb_unselectedColor="@color/app_bg" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

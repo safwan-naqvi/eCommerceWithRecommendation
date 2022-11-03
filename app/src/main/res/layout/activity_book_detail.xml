@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Products.ProductDetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/buy_now_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/add_to_wishlist_btn"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/custom_heart"
+                    android:backgroundTint="@color/app_heading"
+                    android:clickable="true"
+                    android:elevation="@dimen/_4sdp"
+                    android:src="@drawable/heart"
+                    app:layout_constraintEnd_toEndOf="@+id/product_subcategory"
+                    app:layout_constraintTop_toBottomOf="@+id/product_subcategory"
+                    app:tint="#eeeeee" />
+
+                <TextView
+                    android:id="@+id/product_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_light"
+                    android:maxLines="2"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/cod_indicator"
+                    app:layout_constraintStart_toStartOf="@+id/product_image"
+                    app:layout_constraintTop_toBottomOf="@+id/product_image" />
+
+
+                <TextView
+                    android:id="@+id/product_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:maxLines="2"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/cod_indicator"
+                    app:layout_constraintStart_toStartOf="@+id/product_category"
+                    app:layout_constraintTop_toBottomOf="@+id/product_category" />
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/product_subcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="#BCFFFFFF"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/app_name"
+                    android:textColor="#E1041C32"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/product_details_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Rs 49999/-"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/product_title"
+                    app:layout_constraintTop_toBottomOf="@+id/product_title" />
+
+                <ImageView
+                    android:id="@+id/cod_indicator"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="3dp"
+                    android:src="@drawable/cod"
+                    app:layout_constraintBottom_toTopOf="@+id/textView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/product_image" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Available"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/cod_indicator"
+                    app:layout_constraintStart_toStartOf="@+id/cod_indicator"
+                    app:layout_constraintTop_toBottomOf="@+id/cod_indicator" />
+
+                <TextView
+                    android:id="@+id/product_details_only_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="#d4d4d4"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="16dp"
+                    android:text="Product Details"
+                    android:textColor="#9c9c9c"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/product_details_price" />
+
+                <TextView
+                    android:id="@+id/product_details_only_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:maxLines="4"
+                    android:padding="16dp"
+                    android:text="dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                    android:textColor="@color/app_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/product_details_only_title" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/materialDivider"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/app_secondary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/product_details_only_body" />
+
+                <TextView
+                    android:id="@+id/also_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="You May Also Like"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/related_product_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/also_buy" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider2"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/app_secondary" />
+
+            <TextView
+                android:id="@+id/also_buy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="Rate Us"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_15sdp" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/ratingTwo"
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:progressBackgroundTint="#E3E3E3"
+                android:progressTint="@color/app_bg_secondary"
+                android:rating="0"
+                android:saveEnabled="false"
+                android:stepSize="1"
+                app:layout_constraintStart_toStartOf="@+id/product_item_name"
+                app:layout_constraintTop_toBottomOf="@+id/product_item_img"
+                app:mrb_fillBackgroundStars="true" />
+
+            <LinearLayout
+                android:id="@+id/rate_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/slider_bg_two"
+                android:backgroundTint="@color/app_bg_secondary"
+                android:elevation="3dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@+id/product_title"
+                app:layout_constraintTop_toBottomOf="@+id/product_title">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Submit Rating"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <Button
+        android:id="@+id/buy_now_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_minus5sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:padding="@dimen/_15sdp"
+        android:text="Add to Cart"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
